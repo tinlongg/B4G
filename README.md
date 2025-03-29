@@ -1,2 +1,2 @@
 # B4G
-website
+Productivity website with a theme centered around "Whiplash". Don't make Fletcher angry, get your work done.
