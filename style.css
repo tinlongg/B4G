@@ -1,26 +1,50 @@
 
-
-#container {
-    text-align: left;
-    font-size: 2em;
-
+.grid-container {
+    display: grid;
+    grid-template-rows: 80px 1fr;             /* 2 rows: top 80px, bottom available space */
+    grid-template-columns: 1fr 750px 1fr;     /* 3 columns: left availible space, middle 700px, right available space */
+    height: 100vh;                          
 }
 
-
-#container3 {
-    text-align: right;
-    font-size: 1.5em;
+.header {
+    grid-column: 1 / 4;
+    text-align: center;               /* allign text center */
+    padding: 20px;                    /* space inside the box */
+    position: relative;
 }
 
-
-.tasking{
-    list-style-type: none;
+/* left column styling */
+.left {
+    padding: 20px;
 }
 
-.tasking:hover{
-    cursor: pointer;
-    text-decoration: line-through;
+/* middle column styling */
+.middle {
+    padding: 20px;
 }
+
+/* right column styling */
+.right {
+    padding: 20px;
+}
+
+.notes{
+    width: 300px;
+    min-height: 200px;
+    max-height: 300px;
+    padding: 10px;                               /* space inside the box around text */
+    font-size: 16px;            
+    background-color: #ffe692;                 /* light grey border */
+    border-radius: none;                         /* rounded corners */
+    resize: none;                                /* disable manual resize by user */
+    overflow-y: auto;                            /* show scroll bar if content overflows */
+    outline: none;                               /* remomve default browser focus outline */
+    display: block;                              /* allow margin auto allignment */
+    margin-left: auto;                           /* push box to right */
+    margin-right: 20px;                          /* add space from right edge of page */
+    box-shadow: 0 0 10px rgba(104, 43, 43, 0.5);    
+    padding-top: 10px;
+
 
 iframe{
     display: block;
@@ -33,3 +57,149 @@ iframe{
     padding-top: 10px;
 }
 
+
+.top-image {
+    width: 75px;        /* Adjust the size as needed */
+    height: auto;       /* Keeps the aspect ratio */
+    position: absolute; /* Positions it over the header */
+    top: 10px;          /* Distance from top */
+    right: 50px;        /* Distance from right */
+    z-index: 999;
+}
+
+.timer{
+    height: 100%;
+    width: 100%;                                
+    background-color: #551a1a;
+    border: 2px solid #000;
+    border-radius: 150px;
+    animation: deplete 10s linear forwards;
+    transform-origin: left;
+}
+
+@keyframes deplete {
+    from {
+        transform: scaleX(0);   /* start with 0 width */
+    }
+    to {
+        transform: scaleX(0.975);   /* end with full width */
+    }
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+#textbox {
+    flex: 1;                     /* allow the textbox to take up remaining space */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+#textbox:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#textbox::placeholder {
+    color: #888;
+}
+
+#add {
+    margin-left: 10px;  /* add space between the textbox and button */
+    background-color: #06865C;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#savenote {
+    margin-top: 10px; /*add space between notepad and button*/
+    background-color: #06865C;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#savenote:hover {
+    background-color: #DDBA31;
+    transform: translateY(-2px);
+}
+
+#savenote:active {
+    transform: translateY(0);
+}
+
+#add:hover {
+    background-color: #DDBA31;
+    transform: translateY(-2px);
+}
+
+#add:active {
+    transform: translateY(0);
+}
+
+.tasking{
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.tasking:hover{
+    cursor: pointer;
+    text-decoration: line-through;
+}
+#time {
+    font-size: 2em;
+    font-weight: bold;
+}
+ 
+ .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(1, 19, 15, 0.4);
+}
+
+/* Modal content (box) */
+.modal-content {
+    background-color: #FFE692;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #DDBA31;
+    width: 80%; /* Width of the modal */
+    max-width: 500px;
+}
+
+/* Close button */
+.close {
+    color: #DDBA31;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(228, 216, 216);
+    text-decoration: none;
+    cursor: pointer;
+}

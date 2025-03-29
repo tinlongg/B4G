@@ -3,33 +3,102 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Flicker</title>
+
+    <title>My First Webpage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="grid-container">
-    <div id="container">
-        <input id="textbox" placeholder="enter task here"></input>
-        <button id="add">Add</button>
-        <ul id="list"></ul>
+    
+    <div class="grid-container">
+        <!-- top row -->
+        <img src="angry.png" class="top-image">
+        <div class="header">
+            <div class="timer"></div>
         </div>
-    <div id="container2">
-        <iframe src="https://calendar.google.com/calendar/embed?src=benjamin.c.lauzon%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>    <script src="index.js"></script>
+    
+        <!-- bottom row -->
+        <div class="left">
+            <div class="input-group">
+              <input type="text" id="textbox" placeholder="Enter task here">
+              <button id="add">Add</button>
+            </div>
+            <ul id="list"></ul>
+          </div>
+        <div class="middle">
+            <iframe src="https://calendar.google.com/calendar/embed?src=benjamin.c.lauzon%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>    <script src="index.js"></script>
+        </div>
+
+        <!-- right column-->
+        <div class="right">
+            <textarea class="notes" id="notesBox" placeholder="Write your notes here..."></textarea>
+            <button onclick="saveNote()" id="savenote">Save Note</button>
+            <div id="savedNotes"></div>
+        </div>
     </div>
 
- 
+    
+
+    <!--resize textarea as user types-->
+    <script>
+            const notesBox = document.querySelector('.notes');
+
+            notesBox.addEventListener('input', () => {
+                notesBox.style.height = 'auto';
+                notesBox.style.height = notesBox.scrollHeight + 'px';
+            });
+
+    </script>
+
+<div id="myModal" class="modal">
+    <!-- Modal content -->
+    <div class="modal-content">
+        <span class="close" id="closeModalBtn">&times;</span>
+        <p id = "paragraph"></p>
+    </div>
 </div>
 
+<span id="time"></span>
 
 <script>
-    const notesBox = document.querySelector('.notes');
+     function updateIndex() {
+        index = Math.floor(Math.random() * (7 - 0 + 1)) + 0
+        var message_print = message_list[index]
+        document.getElementById("paragraph").innerHTML = message_print;
+        return Math.floor(Math.random() * (max - min + 1)) + min
+    }
 
-    notesBox.addEventListener('input', () => {
-        notesBox.style.height = 'auto';
-        notesBox.style.height = notesBox.scrollHeight + 'px';
-    });
+    <!-- 8 -->
+    let message_list = ["You f*cking donkey! Do you call that f*cking working?","Why do I even bother to waste my time with you?","Not my tempo. Speed up.","Either you're deliberately being slow and wasting my resources or you don't know what hard work is.","I am here to push you beyond what's expected of you. I believe that's an absolute necessity.","Get you ass back on track.","If you want the f*cking grade then earn it.","Your future is your f*cking responsibility."]
 
-</script>
+    function showModal() {
+                const modal = document.getElementById("myModal");
+                modal.style.display = "block";
+            }
+
+    const closeModalBtn = document.getElementById("closeModalBtn");
+    closeModalBtn.onclick = function() {
+        const modal = document.getElementById("myModal");
+        modal.style.display = "none";
+    }
+
+    let timeElapsed = 0;
+
+    function updateTime() {
+        timeElapsed++; 
+        // document.getElementById('time').textContent = timeElapsed;
+        if(timeElapsed % 600 == 0) {
+            timeElapsed = 0
+            showModal()
+        }
+    }
+
+    // Call the updateTime function every second
+    setInterval(updateTime, 1000);
+    setInterval(updateIndex,60000);
+    console.log.updateTime;
+    </script>
+    
+
     <script src="index.js"></script>
 </body>
 </html>
