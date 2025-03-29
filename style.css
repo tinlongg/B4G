@@ -161,3 +161,43 @@ iframe{
     cursor: pointer;
     text-decoration: line-through;
 }
+#time {
+    font-size: 2em;
+    font-weight: bold;
+}
+ 
+ .modal {
+    display: none; 
+    position: fixed; 
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgba(1, 19, 15, 0.4);
+}
+
+/* Modal content (box) */
+.modal-content {
+    background-color: #FFE692;
+    margin: 15% auto;
+    padding: 20px;
+    border: 5px solid #DDBA31;
+    width: 80%; /* Width of the modal */
+    max-width: 500px;
+}
+
+/* Close button */
+.close {
+    color: #DDBA31;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: rgb(228, 216, 216);
+    text-decoration: none;
+    cursor: pointer;
+}
