@@ -1,3 +1,4 @@
+
 document.getElementById("add").onclick = function() {
     let task = document.getElementById("textbox").value;
 
@@ -19,6 +20,7 @@ document.getElementById("add").onclick = function() {
 
 
     }
+
 
 
     function saveNote() {
@@ -52,3 +54,7 @@ document.getElementById("add").onclick = function() {
     }
     
     window.onload = getNotes;
+
+
+
+

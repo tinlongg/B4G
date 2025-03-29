@@ -1,3 +1,4 @@
+
 .grid-container {
     display: grid;
     grid-template-rows: 80px 1fr;             /* 2 rows: top 80px, bottom available space */
@@ -43,7 +44,7 @@
     margin-right: 20px;                          /* add space from right edge of page */
     box-shadow: 0 0 10px rgba(104, 43, 43, 0.5);    
     padding-top: 10px;
-}
+
 
 iframe{
     display: block;
@@ -55,6 +56,7 @@ iframe{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     padding-top: 10px;
 }
+
 
 .top-image {
     width: 75px;        /* Adjust the size as needed */

@@ -1,2 +1,2 @@
-# B4G
-website for task managment based off of whiplash.
+Productivity website with a theme centered around "Whiplash". Don't make Fletcher angry, get your work done.
+
