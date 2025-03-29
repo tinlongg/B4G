@@ -3,13 +3,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Flicker</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Flicker</h1>
+<div class="grid-container">
+    <div id="container">
+        <input id="textbox" placeholder="enter task here"></input>
+        <button id="add">Add</button>
+        <ul id="list"></ul>
+        </div>
+    <div id="container2">
+        <iframe src="https://calendar.google.com/calendar/embed?src=benjamin.c.lauzon%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>    <script src="index.js"></script>
+    </div>
+
+ 
+</div>
 
 
+<script>
+    const notesBox = document.querySelector('.notes');
+
+    notesBox.addEventListener('input', () => {
+        notesBox.style.height = 'auto';
+        notesBox.style.height = notesBox.scrollHeight + 'px';
+    });
+
+</script>
     <script src="index.js"></script>
 </body>
 </html>
