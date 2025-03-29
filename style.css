@@ -9,6 +9,7 @@
     grid-column: 1 / 4;
     text-align: center;               /* allign text center */
     padding: 20px;                    /* space inside the box */
+    position: relative;
 }
 
 /* left column styling */
@@ -55,6 +56,15 @@ iframe{
     padding-top: 10px;
 }
 
+.top-image {
+    width: 75px;        /* Adjust the size as needed */
+    height: auto;       /* Keeps the aspect ratio */
+    position: absolute; /* Positions it over the header */
+    top: 10px;          /* Distance from top */
+    right: 50px;        /* Distance from right */
+    z-index: 999;
+}
+
 .timer{
     height: 100%;
     width: 100%;                                
@@ -67,9 +77,9 @@ iframe{
 
 @keyframes deplete {
     from {
-        transform: scaleX(0);   /* start with full width */
+        transform: scaleX(0);   /* start with 0 width */
     }
     to {
-        transform: scaleX(1);   /* end with 0 width */
+        transform: scaleX(0.975);   /* end with full width */
     }
 }
