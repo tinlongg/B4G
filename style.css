@@ -30,18 +30,17 @@
     width: 300px;
     min-height: 200px;
     max-height: 300px;
-    padding: 10px;                /* space inside the box around text */
+    padding: 10px;                               /* space inside the box around text */
     font-size: 16px;            
-    border: 2px solid #ccc;     /* light grey border */
-    border-radius: 10px;          /* rounded corners */
-    resize: none;                 /* disable manual resize by user */
-    overflow-y: auto;             /* show scroll bar if content overflows */
-    outline: none;                /* remomve default browser focus outline */
-    display: block;               /* allow margin auto allignment */
-    margin-left: auto;            /* push box to right */
-    margin-right: 20px;           /* add space from right edge of page */
-    
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    background-color: #FFE692;                 /* light grey border */
+    border-radius: none;                         /* rounded corners */
+    resize: none;                                /* disable manual resize by user */
+    overflow-y: auto;                            /* show scroll bar if content overflows */
+    outline: none;                               /* remomve default browser focus outline */
+    display: block;                              /* allow margin auto allignment */
+    margin-left: auto;                           /* push box to right */
+    margin-right: 20px;                          /* add space from right edge of page */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
     padding-top: 10px;
 }
 
@@ -60,6 +59,8 @@ iframe{
     height: 100%;
     width: 100%;                                
     background-color: #FF0000;
+    border: 2px solid #000;
+    border-radius: 150px;
     animation: deplete 10s linear forwards;
     transform-origin: left;
 }
