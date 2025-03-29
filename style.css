@@ -1,32 +1,28 @@
 .grid-container {
     display: grid;
     grid-template-rows: 80px 1fr;             /* 2 rows: top 80px, bottom available space */
-    grid-template-columns: 1fr 700px 1fr;     /* 3 columns: left availible space, middle 700px, right available space */
+    grid-template-columns: 1fr 800px 1fr;     /* 3 columns: left availible space, middle 700px, right available space */
     height: 100vh;                          
 }
 
 .header {
     grid-column: 1 / 4;
-    background-color: #f0f0f0;      /* light gray */
     text-align: center;               /* allign text center */
     padding: 20px;                    /* space inside the box */
 }
 
 /* left column styling */
 .left {
-    background-color: #d1e7dd;      /* light green */
     padding: 20px;
 }
 
 /* middle column styling */
 .middle {
-    background-color: #fff3cd;      /* light yellow */
     padding: 20px;
 }
 
 /* right column styling */
 .right {
-    background-color: #f8d7da;      /* light red */
     padding: 20px;
 }
 
@@ -44,4 +40,35 @@
     display: block;               /* allow margin auto allignment */
     margin-left: auto;            /* push box to right */
     margin-right: 20px;           /* add space from right edge of page */
+    
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+}
+
+iframe{
+    display: block;
+    margin: 0 auto;
+    width: 700px;
+    height: 600px;
+    border: 2px solid #000;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    padding-top: 10px;
+}
+
+.timer{
+    height: 100%;
+    width: 100%;                                
+    background-color: #FF0000;
+    animation: deplete 10s linear forwards;
+    transform-origin: left;
+}
+
+@keyframes deplete {
+    from {
+        transform: scaleX(0);   /* start with full width */
+    }
+    to {
+        transform: scaleX(1);   /* end with 0 width */
+    }
 }
