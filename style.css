@@ -1,3 +1,33 @@
+.grid-container {
+    display: grid;
+    grid-template-rows: 80px 1fr;           /* */
+    grid-template-columns: 1fr 700px 1fr;     /* column width */
+    height: 100vh;                          
+}
+
+/* Positioning each item */
+.header {
+    grid-column: 1 / 4;
+    background-color: #f0f0f0;
+    text-align: center;
+    padding: 20px;
+}
+
+.left {
+    background-color: #d1e7dd;
+    padding: 20px;
+}
+
+.middle {
+    background-color: #fff3cd;
+    padding: 20px;
+}
+
+.right {
+    background-color: #f8d7da;
+    padding: 20px;
+}
+
 .notes{
     width: 300px;
     min-height: 200px;
