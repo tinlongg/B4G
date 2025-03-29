@@ -3,13 +3,27 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>My First Webpage</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Flicker</h1>
+    <!-- -->
+    <h1>Hello World</h1>
 
+    <!--textarea to type notes-->
+    <textarea class="notes" placeholder="Write your notes here..."></textarea>
 
+    <!--resize textarea as user types-->
+    <script>
+            const notesBox = document.querySelector('.notes');
+
+            notesBox.addEventListener('input', () => {
+                notesBox.style.height = 'auto';
+                notesBox.style.height = notesBox.scrollHeight + 'px';
+            });
+
+    </script>
+    
     <script src="index.js"></script>
 </body>
 </html>
