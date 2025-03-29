@@ -1,7 +1,7 @@
 .grid-container {
     display: grid;
     grid-template-rows: 80px 1fr;             /* 2 rows: top 80px, bottom available space */
-    grid-template-columns: 1fr 800px 1fr;     /* 3 columns: left availible space, middle 700px, right available space */
+    grid-template-columns: 1fr 750px 1fr;     /* 3 columns: left availible space, middle 700px, right available space */
     height: 100vh;                          
 }
 
@@ -82,4 +82,60 @@ iframe{
     to {
         transform: scaleX(0.975);   /* end with full width */
     }
+}
+
+.input-group {
+    display: flex;
+    align-items: center;
+}
+
+#textbox {
+    flex: 1;                     /* allow the textbox to take up remaining space */
+    padding: 10px;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    outline: none;
+}
+
+#textbox:focus {
+    border-color: #007BFF;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+#textbox::placeholder {
+    color: #888;
+}
+
+#add {
+    margin-left: 10px;  /* add space between the textbox and button */
+    background-color: #007BFF;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#add:hover {
+    background-color: #0056b3;
+    transform: translateY(-2px);
+}
+
+#add:active {
+    transform: translateY(0);
+}
+
+.tasking{
+    list-style-type: none;
+    font-size: 25px;
+}
+
+.tasking:hover{
+    cursor: pointer;
+    text-decoration: line-through;
 }

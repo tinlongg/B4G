@@ -16,14 +16,22 @@
         </div>
     
         <!-- bottom row -->
-        <div class="left"></div>
+        <div class="left">
+            <div class="input-group">
+              <input type="text" id="textbox" placeholder="Enter task here">
+              <button id="add">Add</button>
+            </div>
+            <ul id="list"></ul>
+          </div>
         <div class="middle">
             <iframe src="https://calendar.google.com/calendar/embed?src=benjamin.c.lauzon%40gmail.com&ctz=America%2FChicago" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>    <script src="index.js"></script>
         </div>
 
         <!-- right column-->
         <div class="right">
-            <textarea class="notes" placeholder="Write your notes here..."></textarea>
+            <textarea class="notes" id="notesBox" placeholder="Write your notes here..."></textarea>
+            <button onclick="saveNote()">Save Note</button>
+            <div id="savedNotes"></div>
         </div>
     </div>
 
