@@ -33,7 +33,7 @@
     max-height: 300px;
     padding: 10px;                               /* space inside the box around text */
     font-size: 16px;            
-    background-color: #FFE692;                 /* light grey border */
+    background-color: #ffe692;                 /* light grey border */
     border-radius: none;                         /* rounded corners */
     resize: none;                                /* disable manual resize by user */
     overflow-y: auto;                            /* show scroll bar if content overflows */
@@ -41,7 +41,7 @@
     display: block;                              /* allow margin auto allignment */
     margin-left: auto;                           /* push box to right */
     margin-right: 20px;                          /* add space from right edge of page */
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);    
+    box-shadow: 0 0 10px rgba(104, 43, 43, 0.5);    
     padding-top: 10px;
 }
 
@@ -68,7 +68,7 @@ iframe{
 .timer{
     height: 100%;
     width: 100%;                                
-    background-color: #FF0000;
+    background-color: #551a1a;
     border: 2px solid #000;
     border-radius: 150px;
     animation: deplete 10s linear forwards;
@@ -110,7 +110,7 @@ iframe{
 
 #add {
     margin-left: 10px;  /* add space between the textbox and button */
-    background-color: #007BFF;
+    background-color: #06865C;
     border: none;
     color: #fff;
     padding: 10px 20px;
@@ -121,8 +121,30 @@ iframe{
     transition: background-color 0.3s, transform 0.2s;
 }
 
+#savenote {
+    margin-top: 10px; /*add space between notepad and button*/
+    background-color: #06865C;
+    border: none;
+    color: #fff;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#savenote:hover {
+    background-color: #DDBA31;
+    transform: translateY(-2px);
+}
+
+#savenote:active {
+    transform: translateY(0);
+}
+
 #add:hover {
-    background-color: #0056b3;
+    background-color: #DDBA31;
     transform: translateY(-2px);
 }
 
